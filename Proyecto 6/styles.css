@@ -1,0 +1,114 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #2E2E2E; /* Fondo oscuro */
+    font-family: 'Arial', sans-serif;
+}
+
+.logo-container {
+    text-align: center;
+    opacity: 0; /* Inicialmente oculto */
+    animation: fadeIn 0.8s forwards; /* Animación de aparición más rápida */
+}
+
+.logo {
+    font-size: 64px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Inicialmente oculto */
+    animation: fadeIn 0.8s 0.5s forwards; /* Animación de aparición más rápida con retraso */
+}
+
+.logo-part1 {
+    color: #007BFF; /* Azul */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: bounceInLeft 0.8s 1.5s forwards; /* Animación de rebote desde la izquierda */
+}
+
+.logo-part2 {
+    color: #FF5733; /* Naranja */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 72px;
+    margin-left: 5px;
+    animation: bounceInRight 0.8s 1.5s forwards; /* Animación de rebote desde la derecha */
+}
+
+.subtitle {
+    color: #CCCCCC; /* Gris claro */
+    font-size: 24px;
+    margin-top: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Inicialmente oculto */
+    animation: fadeIn 0.8s 2s forwards; /* Animación de aparición más rápida con retraso */
+}
+
+.biography-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #FFFFFF;
+    background-color: #007BFF; /* Azul */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+    opacity: 0; /* Inicialmente oculto */
+    animation: fadeIn 0.8s 2.5s forwards; /* Animación de aparición más rápida con retraso */
+}
+
+.biography-button:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+}
+
+.biography-box {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #444444; /* Fondo de la biografía */
+    color: #FFFFFF;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0; /* Inicialmente oculto */
+    animation: fadeIn 0.8s 2.5s forwards; /* Animación de aparición más rápida con retraso */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounceInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
